@@ -4,7 +4,7 @@ import java.awt.Panel;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Main extends Frame implements MouseListener, MouseMotionListener{
+public class Main extends Frame implements MouseListener, MouseMotionListener, KeyListener{
 
     Panel p;
     Mundo mundo;
@@ -15,6 +15,9 @@ public class Main extends Frame implements MouseListener, MouseMotionListener{
         mundo = new Mundo();
         p.setLayout(new BorderLayout());
         p.add(mundo, BorderLayout.CENTER);
+        this.addKeyListener(this);
+        p.addKeyListener(this);
+        mundo.addKeyListener(this);
         mundo.addMouseListener(this);
         mundo.addMouseMotionListener(this);
         this.setLayout(new BorderLayout());
@@ -76,5 +79,43 @@ public class Main extends Frame implements MouseListener, MouseMotionListener{
     public void mouseExited(MouseEvent e) {
         // TODO Auto-generated method stub
         System.out.println("Exited");
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        // TODO Auto-generated method stub
+        switch (e.getKeyCode()){
+            case 'a':
+            case KeyEvent.VK_A:
+                mundo.setX(mundo.getX()-1);
+                break;
+            case 's':
+            case KeyEvent.VK_S:
+                mundo.setY(mundo.getY()+1);
+                break;
+            case 'd':
+            case KeyEvent.VK_D:
+                mundo.setX(mundo.getX()+1);
+                break;
+            case 'w':
+            case KeyEvent.VK_W:
+                mundo.setY(mundo.getY()-1);
+                break;
+        }
+
+        mundo.repaint();
+        
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        // TODO Auto-generated method stub
+        
     }
 }
