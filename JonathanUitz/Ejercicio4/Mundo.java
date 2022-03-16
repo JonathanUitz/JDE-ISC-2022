@@ -33,11 +33,11 @@ public class Mundo extends Canvas{
     }
 
     public int getY(){
-        return x;
+        return y;
     }
 
-    public void setY(int x){
-        this.x = x;
+    public void setY(int y){
+        this.y = y;
     }
     
 }
