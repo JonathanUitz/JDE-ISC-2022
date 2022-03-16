@@ -12,12 +12,12 @@ public class Main extends Frame implements MouseListener, MouseMotionListener{
     public Main(){
 
         p = new Panel();
-        this.setLayout(new BorderLayout());
-        p.setLayout(new BorderLayout());
         mundo = new Mundo();
-        p.add(mundo);
+        p.setLayout(new BorderLayout());
+        p.add(mundo, BorderLayout.CENTER);
         mundo.addMouseListener(this);
         mundo.addMouseMotionListener(this);
+        this.setLayout(new BorderLayout());
         this.add(p, BorderLayout.CENTER);
         this.setSize(500, 400);
         this.setVisible(true);
@@ -51,6 +51,7 @@ public class Main extends Frame implements MouseListener, MouseMotionListener{
         System.out.println("Clicked");
         mundo.setX(e.getX());
         mundo.setY(e.getY());
+        mundo.repaint();
     }
 
     @Override
