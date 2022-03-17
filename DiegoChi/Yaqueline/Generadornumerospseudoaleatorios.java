@@ -7,7 +7,7 @@ public class Generadornumerospseudoaleatorios {
 	}
 	public static void valores(int a,int c, int m, int x0, int n) {
 		int Xn= x0;
-		int variable;
+		int variable = 0;
 		for(int i=0;i<n;i++) {
 			int x2= (a*Xn +c )%m;
 			float unif =(float)x2/m;
