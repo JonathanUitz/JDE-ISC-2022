@@ -12,7 +12,10 @@ public class Mundo extends Canvas{
     int food_y;
     int food_s;
 
+    int sprite;
+
     public Mundo(){
+        sprite = 1;
         x=20;
         y=28;
         w = h = 100;
@@ -29,8 +32,22 @@ public class Mundo extends Canvas{
         g.setColor(Color.YELLOW);
         g.fillOval(food_x, food_y, food_s, food_s);
         g.setColor(Color.BLACK);
-        g.drawRect(x, y, w, h);
-        g.fillOval(x, y, w, h);
+        //g.drawRect(x, y, w, h);
+        switch (sprite) {
+            case 1:
+                g.fillOval(x, y, w, h);
+                break;
+            
+            case 2:
+                g.fillArc(x, y, w, h, 0, 270);
+                break;
+
+            case 3:
+                g.fillArc(x, y, w, h, 0, 200);
+                break;
+    
+        }
+        //g.fillOval(x, y, w, h);
         g.setColor(Color.WHITE);
         g.drawString("Hola mundo", x, (y+h/2));
 
@@ -67,6 +84,13 @@ public class Mundo extends Canvas{
 
     public void setY(int y){
         this.y = y;
+    }
+
+    public void setSprite(){
+        sprite++;
+        if(sprite>3){
+            sprite=1;
+        }
     }
     
 }
