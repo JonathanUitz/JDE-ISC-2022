@@ -1,4 +1,4 @@
-package JonathanUitz.Ejercicio4;
+
 import java.awt.Frame;
 import java.awt.Panel;
 import java.awt.*;
