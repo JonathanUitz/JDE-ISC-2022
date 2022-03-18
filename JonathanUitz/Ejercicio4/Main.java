@@ -108,7 +108,7 @@ public class Main extends Frame implements MouseListener, MouseMotionListener, K
                 mundo.setY(mundo.getY()-1);
                 break;
         }
-
+        mundo.setSprite();
         mundo.repaint();
         
     }
