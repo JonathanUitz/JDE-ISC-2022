@@ -1,4 +1,3 @@
-package JonathanUitz.Ejercicio2;
 
 import java.awt.BorderLayout;
 import java.awt.Button;
