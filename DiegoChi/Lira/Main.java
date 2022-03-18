@@ -4,7 +4,7 @@ import java.awt.Panel;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.*;
-import Lira.Ejercicio3;
+
 
 public class Main extends Frame implements MouseListener, MouseMotionListener,KeyListener {
 
