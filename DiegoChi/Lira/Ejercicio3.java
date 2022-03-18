@@ -11,14 +11,21 @@ public class Ejercicio3 extends Canvas {
     int w, h; 
 
     int food_x;
+    int sprite;
     int food_y;
     int food_s;
 
     public Ejercicio3(){
+        sprite = 1;
         x = 28;
         y = 50;
         w = h = 100;
         numGe();
+
+        food_x = ((int)(Math.random())*500);
+        fodd_y = ((int)(Math.random())*400);
+        System.out.println(food_x + "" + food_y);
+        food_s = 20;
     }
     public void paint (Graphics g){
 
@@ -28,14 +35,21 @@ public class Ejercicio3 extends Canvas {
             g.fillOval(x, y, w, h);
             g.setColor(Color.WHITE);
             g.drawString("Hola", x, y + h/2);    
-
             g.setColor(Color.BLUE);
             g.fillRect(x2,y2,20,20);
     }
 
     public void colision(){
-        if(x >= food_x && y >= food_y &&
-        (x + w) >food_x && (y + h)> food_y
+        /**
+         * La posición "x" de la principal es mayor que la posición de x de la secundaria
+         * La posición "x" de la principal es menor que la posición de la secundaria más el ancho
+         * La posición "y" de la principal es mayor que la posición de y de la secundaria
+         * La posición "y" de la principal es menor que la posición de la secundaria más la altura
+         */
+        if( food_x > x && 
+            food_x < (x-w) &&
+           food_y > y &&
+            food_y < (y+h) 
         ){
             food_x = (int)(Math.random()*500);
             food_y = (int)(Math.random()*400);
