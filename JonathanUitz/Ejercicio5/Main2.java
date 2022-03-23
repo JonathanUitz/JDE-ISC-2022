@@ -6,12 +6,12 @@ import java.awt.event.*;
 public class Main2 extends Frame implements MouseListener, MouseMotionListener, KeyListener{
 
     Panel p;
-    Mundo mundo;
+    Mundo2 mundo;
 
     public Main2(){
 
         p = new Panel();
-        mundo = new Mundo();
+        mundo = new Mundo2();
         p.setLayout(new BorderLayout());
         p.add(mundo, BorderLayout.CENTER);
         this.addKeyListener(this);
@@ -32,7 +32,7 @@ public class Main2 extends Frame implements MouseListener, MouseMotionListener, 
     }
 
     public static void main(String[] args) {
-        Mundo1 canvasI = new Mundo1();
+        Mundo2 canvasP = new Mundo2();
     }
 
     @Override
