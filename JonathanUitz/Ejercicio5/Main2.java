@@ -1,25 +1,24 @@
-
 import java.awt.Frame;
 import java.awt.Panel;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Main extends Frame implements MouseListener, MouseMotionListener, KeyListener{
+public class Main2 extends Frame implements MouseListener, MouseMotionListener, KeyListener{
 
     Panel p;
-    Mundo mundo;
+    Mundo2 mundo2;
 
-    public Main(){
+    public Main2(){
 
         p = new Panel();
-        mundo = new Mundo();
+        mundo2 = new Mundo2();
         p.setLayout(new BorderLayout());
-        p.add(mundo, BorderLayout.CENTER);
+        p.add(mundo2, BorderLayout.CENTER);
         this.addKeyListener(this);
         p.addKeyListener(this);
-        mundo.addKeyListener(this);
-        mundo.addMouseListener(this);
-        mundo.addMouseMotionListener(this);
+        mundo2.addKeyListener(this);
+        mundo2.addMouseListener(this);
+        mundo2.addMouseMotionListener(this);
         this.setLayout(new BorderLayout());
         this.add(p, BorderLayout.CENTER);
         this.setSize(500, 400);
@@ -33,7 +32,7 @@ public class Main extends Frame implements MouseListener, MouseMotionListener, K
     }
 
     public static void main(String[] args) {
-        Main canvasI = new Main();
+        Mundo2 canvasP = new Mundo2();
     }
 
     @Override
@@ -52,9 +51,9 @@ public class Main extends Frame implements MouseListener, MouseMotionListener, K
     public void mouseClicked(MouseEvent e) {
         // TODO Auto-generated method stub
         System.out.println("Clicked");
-        mundo.setX(e.getX());
-        mundo.setY(e.getY());
-        mundo.repaint();
+        mundo2.setX(e.getX());
+        mundo2.setY(e.getY());
+        mundo2.repaint();
     }
 
     @Override
@@ -93,23 +92,23 @@ public class Main extends Frame implements MouseListener, MouseMotionListener, K
         switch (e.getKeyCode()){
             case 'a':
             case KeyEvent.VK_A:
-                mundo.setX(mundo.getX()-1);
+                mundo2.setX(mundo2.getX()-1);
                 break;
             case 's':
             case KeyEvent.VK_S:
-                mundo.setY(mundo.getY()+1);
+                mundo2.setY(mundo2.getY()+1);
                 break;
             case 'd':
             case KeyEvent.VK_D:
-                mundo.setX(mundo.getX()+1);
+                mundo2.setX(mundo2.getX()+1);
                 break;
             case 'w':
             case KeyEvent.VK_W:
-                mundo.setY(mundo.getY()-1);
+                mundo2.setY(mundo2.getY()-1);
                 break;
         }
-        mundo.setSprite();
-        mundo.repaint();
+        mundo2.setSprite();
+        mundo2.repaint();
         
     }
 

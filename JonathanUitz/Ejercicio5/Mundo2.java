@@ -3,7 +3,7 @@ import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Mundo extends Canvas{
+public class Mundo2 extends Canvas{
 
     int x, y;
     int w, h;
@@ -14,7 +14,7 @@ public class Mundo extends Canvas{
 
     int sprite;
 
-    public Mundo(){
+    public Mundo2(){
         sprite = 1;
         x=20;
         y=28;
