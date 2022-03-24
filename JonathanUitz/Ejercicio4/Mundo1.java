@@ -16,16 +16,14 @@ public class Mundo1 extends Canvas{
 
     public void paint(Graphics g){
 
-        for(int x=0; x<100;x++){
 
             g.setColor(Color.BLACK);
             g.drawRect(x, y, w, h);
-
             g.fillOval(x, y, w, h);
             g.setColor(Color.WHITE);
             g.drawString("Hola mundo", x, (y+h/2));
 
-        }
+        
     }
     
 }
