@@ -23,7 +23,7 @@ public class Ejercicio3 extends Canvas {
         numGe();
 
         food_x = ((int)(Math.random())*500);
-        fodd_y = ((int)(Math.random())*400);
+        food_y = ((int)(Math.random())*400);
         System.out.println(food_x + "" + food_y);
         food_s = 20;
     }
