@@ -1,4 +1,3 @@
-package JonathanUitz;
 
 public class hello {
     
