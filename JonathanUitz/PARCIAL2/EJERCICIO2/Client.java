@@ -16,7 +16,9 @@ public class Client {
         String answer = "";
         do {
             System.out.println("Sending message from localhost");
-            out.println("Este es mi mensaje");
+            String line = internal_read.readLine();
+
+            out.println(line);
             out.flush();
             answer = in.readLine();
             System.out.print("Ya me contestaron: " + answer);
